@@ -101,6 +101,12 @@ footer {
 @media (max-width:500px) {
     .bar{
         height: 200px;
+    }    
+}
+@media (max-width:576px) {
+    #heading_name{
+        padding-left: 0px;
+        margin: 5px 10px 10px 2px;
     }
 }
 @media (max-width:430px) {
