@@ -1,0 +1,110 @@
+:root {
+    /* --primary: #7f00ff; */
+    --primary:red;    
+    --accent: pink;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+body {
+    /* overflow: hidden; */
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: 2000px 2050px;
+}
+
+#heading_name {
+    display: inline-block;
+    margin: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 2rem;
+}
+
+.menu_item:hover {
+    color: var(--primary);
+}
+
+#profileimage {
+    border-radius: 5%;
+}
+
+#skillbox::after {
+    margin: 5px;
+    display: block;
+    content: "";
+    width: 100px;
+    height: 3px;
+    background-color: var(--primary);
+}
+
+#projectbox::after {
+    margin: 5px;
+    display: block;
+    content: "";
+    width: 150px;
+    height: 3px;
+    background-color: var(--primary);
+}
+
+#experiencebox::after {
+    margin: 5px;
+    display: block;
+    content: "";
+    width: 150px;
+    height: 3px;
+    background-color: var(--primary);
+}
+
+.form-switch .form-check-input:checked {
+    background-color: var(--primary) !important;
+    /* Change to your desired color */
+}
+
+.form-switch .form-check-input:disabled {
+    background-color: white !important;
+    /* Change to your desired color */
+}
+.bar{
+    height: 150px;
+    border-left: 2px solid var(--primary)
+}
+footer {
+    width: 100%;
+    height: 30px;
+    background-color: var(--primary);
+    background-color: black;
+}
+
+@media (max-width: 992px) { 
+    #skillbox::after{
+        margin:10px auto 0px auto;
+    }
+    #projectbox::after {
+        margin:10px auto 0px auto;        
+    }
+    #experiencebox::after {
+        margin:10px auto 0px auto;        
+    }
+    
+}
+@media (max-width:690px) {
+    #profileimage{
+        width: 200px;
+        height: 250px;    
+    }  
+} 
+@media (max-width:500px) {
+    .bar{
+        height: 200px;
+    }
+}
+@media (max-width:430px) {
+    .bar{
+        height: 230px;
+    }
+}
