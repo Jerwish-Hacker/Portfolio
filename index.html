@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="jquery.js"></script>
 <html lang="en" data-bs-theme="light">
 <head>
     <meta charset="UTF-8">
@@ -8,11 +8,8 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="new_style.css">        
     <script src="code.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="bootstrap_js.js"></script>
 </head>
 
 <body>
@@ -64,7 +61,7 @@
                 <h2 id="iam" class="fs-1 mt-4">I'm <span>a </span><span id="change_text"></span></h2>
                 <script>
                     var typed = new Typed('#change_text', {
-                        strings: ['Full Stack.', 'YouTuber.', 'Coder.', 'Designer.', 'Programmer.'],
+                        strings: ['Full Stack.', 'Coder.', 'Designer.', 'Programmer.'],
                         typeSpeed: 350,
                         backSpeed: 350,
                         loop: true,
@@ -72,7 +69,7 @@
                     });
                 </script>
                 <p class="lead mt-md-5 mt-3">
-                    Python, Java, JavaScript unite,Creating wonders, day and night.Through loops and functions, their
+                    Java, Python, JavaScript unite,Creating wonders, day and night.Through loops and functions, their
                     MAGIC unfolds,Solving problems, turning dreams into GOLD.
                 </p>
 
@@ -80,7 +77,8 @@
 
                 <div class="row">
                     <div class="col-12 text-end">
-                        <img src="./image/linkedin.svg" alt="" width="35px">
+                        <a href="https://www.linkedin.com/in/justin-raj-/" target="_blank"><img src="./image/linkedin.svg" alt="" width="35px"></a>
+                        
                         <img src="./image/utube.svg" alt="" width="50px" class="mt-1">
                     </div>
                 </div>
