@@ -1,276 +1,482 @@
 <!DOCTYPE html>
 <script src="jquery.js"></script>
 <html lang="en" data-bs-theme="light">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="new_style.css">        
+    <link rel="stylesheet" href="new_style.css" />
     <script src="code.js"></script>
-    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="bootstrap.css" />
     <script src="bootstrap_js.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- #navbar -->
     <nav class="fixed-top bg-body-tertiary shadow">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-4 col-sm-8 col-10 mt-2 text-sm-start">
-                    <h2 id="heading_name">Justin Raj</h2>
-                </div>
-                <div class="col-4 text-center d-lg-block d-none">
-                    <p class="m-3 fs-4">Full Stack Web Developer</p>
-                </div>
-                <div class="col-sm-4 col-2 d-flex justify-content-end">
-                    <div class="form-check form-switch ms-auto mt-sm-4 mt-3 me-2">
-                        <label class="form-check-label ms-3" for="lightSwitch">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
-                                class="bi bi-brightness-high" viewBox="0 0 16 16">
-                                <path
-                                    d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
-                            </svg>
-                        </label>
-                        <input class="form-check-input" type="checkbox" id="lightSwitch" style="display:none" />
-                    </div>
-                    <script>
-                        $("input[id='lightSwitch']").on("change", function () {
-                            if ($("html").attr("data-bs-theme") == 'light') {
-                                $("html").attr("data-bs-theme", "dark");
-                            } else if ($("html").attr("data-bs-theme") == "dark") {
-                                $("html").attr("data-bs-theme", "light");
-                            }
-                        });            
-                    </script>
-                </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-4 col-sm-8 col-10 mt-2 text-sm-start">
+            <h2 id="heading_name">Justin Raj</h2>
+          </div>
+          <div class="col-4 text-center d-lg-block d-none">
+            <p class="m-3 fs-4">Full Stack Web Developer</p>
+          </div>
+          <div class="col-sm-4 col-2 d-flex justify-content-end">
+            <div class="form-check form-switch ms-auto mt-sm-4 mt-3 me-2">
+              <label class="form-check-label ms-3" for="lightSwitch">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="22"
+                  height="22"
+                  fill="currentColor"
+                  class="bi bi-brightness-high"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+                  />
+                </svg>
+              </label>
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="lightSwitch"
+                style="display: none"
+              />
             </div>
+            <script>
+              $("input[id='lightSwitch']").on("change", function () {
+                if ($("html").attr("data-bs-theme") == "light") {
+                  $("html").attr("data-bs-theme", "dark");
+                } else if ($("html").attr("data-bs-theme") == "dark") {
+                  $("html").attr("data-bs-theme", "light");
+                }
+              });
+            </script>
+          </div>
         </div>
+      </div>
     </nav>
     <div class="mt-3">
-        <p>Lorem.</p>
+      <p>Lorem.</p>
     </div>
 
     <!-- #profile box -->
     <div class="container-lg container-fluid mt-5">
-        <div class="row">
-            <div class="col-xl-3 col-lg-4 col-sm-5 col-12 d-flex justify-content-center ">
-                <img src="./image/me.png" id="profileimage" class="shadow-lg img-fluid" width="80%">
-            </div>
-            <div class="col-xl-9 col-lg-8 col-sm-7 col-12 text-md-start text-center">
-                <h2 id="iam" class="fs-1 mt-4">I'm <span>a </span><span id="change_text"></span></h2>
-                <script>
-                    var typed = new Typed('#change_text', {
-                        strings: ['Full Stack.', 'Coder.', 'Designer.', 'Programmer.'],
-                        typeSpeed: 350,
-                        backSpeed: 350,
-                        loop: true,
-                        loopCount: Infinity
-                    });
-                </script>
-                <p class="lead mt-md-5 mt-3">
-                    Java, Python, JavaScript unite,Creating wonders, day and night.Through loops and functions, their
-                    MAGIC unfolds,Solving problems, turning dreams into GOLD.
-                </p>
-
-
-
-                <div class="row">
-                    <div class="col-12 text-end">
-                        <a href="https://www.linkedin.com/in/justin-raj-/" target="_blank"><img src="./image/linkedin.svg" alt="" width="35px"></a>
-                        
-                        <img src="./image/utube.svg" alt="" width="50px" class="mt-1">
-                    </div>
-                </div>
-            </div>
+      <div class="row">
+        <div
+          class="col-xl-3 col-lg-4 col-sm-5 col-12 d-flex justify-content-center"
+        >
+          <img
+            src="./image/me.png"
+            id="profileimage"
+            class="shadow-lg img-fluid"
+            width="80%"
+          />
         </div>
-        <hr>
+        <div
+          class="col-xl-9 col-lg-8 col-sm-7 col-12 text-md-start text-center"
+        >
+          <h2 id="iam" class="fs-1 mt-4">
+            I'm <span>a </span><span id="change_text"></span>
+          </h2>
+          <script>
+            var typed = new Typed("#change_text", {
+              strings: ["Full Stack.", "Coder.", "Designer.", "Programmer."],
+              typeSpeed: 350,
+              backSpeed: 350,
+              loop: true,
+              loopCount: Infinity,
+            });
+          </script>
+          <p class="lead mt-md-5 mt-3">
+            Java, Python, JavaScript unite,Creating wonders, day and
+            night.Through loops and functions, their MAGIC unfolds,Solving
+            problems, turning dreams into GOLD.
+          </p>
+
+          <div class="row">
+            <div class="col-12 text-end">
+              <a href="https://www.linkedin.com/in/justin-raj-/" target="_blank"
+                ><img src="./image/linkedin.svg" alt="" width="35px"
+              /></a>
+
+              <img src="./image/utube.svg" alt="" width="50px" class="mt-1" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
     </div>
 
     <!-- #project box -->
     <div class="container-lg container-fluid">
-        <div class="row mt-3">
-            <div class="col-12 text-lg-start text-center">
-                <h2 id="projectbox">My Project</h2>
-            </div>
-            <div class="col-lg-11  col-10 mx-auto offset-lg-1  mt-3 text-lg-start text-center">
-                <p class="mb-4"><u><a class="fs-5" href="https://github.com/Jerwish-Hacker/Banking_Basic"
-                            target="_blank" style="all: unset;">
-                            Python</a>
-                    </u> <br> The Python code represents a basic banking system. It allows users to create and
-                    manage bank accounts, perform transactions, and check balances. Users can create accounts, deposit
-                    and withdraw funds, and inquire about balances. The code provides a simple interface and can be
-                    expanded with additional features for real-world applications.
-                </p>
-                <p class="mb-4">
-                    <u>
-                        <a class="fs-5" href='https://jerwish-hacker.github.io/Transparent_Login_Page/' target='_blank'
-                            style="all: unset;">HTML and CSS</a></u> <br> The transparent Login form created using HTML
-                    and CSS provides a visually appealing interface. It features a login form with transparent elements,
-                    allowing the background to show through. The form allows users to input login credentials and submit
-                    them for authentication, enhancing the overall user experience.
-                </p>
-                <p class="mb-4"><u>
-                        <a class="fs-5" href='https://jerwish-hacker.github.io/JerwishConstruction/index.html'
-                            target='_blank' style="all: unset;">BootStrap</a>
-                    </u> <br> The construction website built with Bootstrap offers a responsive and
-                    professional design. It showcases various construction services, project portfolios, and contact
-                    information. Utilizing Bootstrap's framework, the website ensures optimal performance across devices
-                    and provides an intuitive user experience, catering to the needs of construction industry
-                    stakeholders. </p>
-
-                <p><u><a class="fs-5" href="https://github.com/Jerwish-Hacker/Resume_Creator" target="_blank"
-                            style="all: unset;">Java</a></u> <br>Java-based Resume Creator: Build professional resumes
-                    with ease. Choose from customizable templates, edit content dynamically, preview in real-time, and
-                    export in various formats. User-friendly interface and data persistence. Streamline your job
-                    application process efficiently.</p>
-            </div>
+      <div class="row mt-3">
+        <div class="col-12 text-lg-start text-center">
+          <h2 id="projectbox">My Project</h2>
         </div>
+        <div
+          class="col-lg-11 col-10 mx-auto offset-lg-1 mt-3 text-lg-start text-center"
+        >
+        <!-- python -->
+
+          <p class="mb-4 shadow-lg p-4 rounded-3">
+            <span class="fs-4"> Python </span>
+            <br />
+            <img
+              src="./image/bank.jpeg"
+              class="img-fluid my-3 rounded"
+              width="250px"
+              height="300px"
+            />
+
+            <br />
+            The Python code represents a basic banking system. It allows users
+            to create and manage bank accounts, perform transactions, and check
+            balances. Users can create accounts, deposit and withdraw funds, and
+            inquire about balances. The code provides a simple interface and can
+            be expanded with additional features for real-world applications.
+            <br />
+            <a
+            class=""
+            href="https://github.com/Jerwish-Hacker/Banking_Basic"
+            target="_blank"
+            style="all: unset"
+            >
+            <button
+              class="btn btn-outline-danger m-3"
+              style="
+                padding: 10px 15px;
+                border-width: 1px;
+                font-size: 14px;
+                font-weight: 500;
+              "
+            >
+             Source Code
+            </button>
+        </a>
+          </p>
+
+          <!-- html and css -->
+          <p class="mb-4 shadow-lg p-4">
+            <span class="fs-4">HTML and CSS</span>
+            <br />
+            <img
+              src="./image/login.png"
+              class=" img-fluid my-3 rounded"
+              width="250px"
+              height="300px"
+            />
+
+            <br />
+            The transparent Login form created using HTML and CSS provides a
+            visually appealing interface. It features a login form with
+            transparent elements, allowing the background to show through. The
+            form allows users to input login credentials and submit them for
+            authentication, enhancing the overall user experience.
+            <br>
+            <a
+            class=""
+            href="https://github.com/Jerwish-Hacker/Transparent_Login_Page"
+            target="_blank"
+            style="all: unset"
+            >
+            <button
+              class="btn btn-outline-danger m-3"
+              style="
+                padding: 10px 15px;
+                border-width: 1px;
+                font-size: 14px;
+                font-weight: 500;
+              "
+            >
+             Source Code
+            </button>
+            </a>
+            <a
+            class=""
+            href="https://jerwish-hacker.github.io/Transparent_Login_Page/"
+            target="_blank"
+            style="all: unset"
+            >
+            <button
+              class="btn btn-outline-success m-3"
+              style="
+                padding: 10px 15px;
+                border-width: 1px;
+                font-size: 14px;
+                font-weight: 500;
+              "
+            >
+             Go Live
+            </button>
+        </a>
+          </p>
+
+          <!-- bootstrap -->
+          <p class="mb-4 shadow-lg p-4">
+            <span class="fs-4">
+                BootStrap
+            </span>
+              <!-- <a
+                class="fs-5"
+                href="https://jerwish-hacker.github.io/JerwishConstruction/index.html"
+                target="_blank"
+                style="all: unset"
+                ></a> -->
+                <br />
+              <img
+                src="./image/democonstruction.png"
+                class="rounded img-fluid my-3"
+                width="250px"
+                height="300px"
+              />
+            <br />
+            The construction website built with Bootstrap offers a responsive
+            and professional design. It showcases various construction services,
+            project portfolios, and contact information. Utilizing Bootstrap's
+            framework, the website ensures optimal performance across devices
+            and provides an intuitive user experience, catering to the needs of
+            construction industry stakeholders.
+            <br>
+            <a
+            class=""
+            href="https://github.com/Jerwish-Hacker/JerwishConstruction"
+            target="_blank"
+            style="all: unset"
+            >
+            <button
+              class="btn btn-outline-danger m-3"
+              style="
+                padding: 10px 15px;
+                border-width: 1px;
+                font-size: 14px;
+                font-weight: 500;
+              "
+            >
+             Source Code
+            </button>
+            </a>
+            <a
+            class=""
+            href="https://jerwish-hacker.github.io/JerwishConstruction/"
+            target="_blank"
+            style="all: unset"
+            >
+            <button
+              class="btn btn-outline-success m-3"
+              style="
+                padding: 10px 15px;
+                border-width: 1px;
+                font-size: 14px;
+                font-weight: 500;
+              "
+            >
+             Go Live
+            </button>
+        </a>
+
+          </p>
+
+          <p class="shadow-lg p-4">
+            <span class="fs-4">Java</span>
+            <br />
+            <img
+              src="./image/resume_bulider.png"
+              class="rounded img-fluid my-3"
+              width="250px"
+              height="300px"
+            />
+            <br />Java-based Resume Creator: Build professional resumes with
+            ease. Choose from customizable templates, edit content dynamically,
+            preview in real-time, and export in various formats. User-friendly
+            interface and data persistence. Streamline your job application
+            process efficiently.
+            <br>
+            <a
+            class=""
+            href="https://github.com/Jerwish-Hacker/Resume_Creator"
+            target="_blank"
+            style="all: unset"
+            >
+            <button
+              class="btn btn-outline-danger m-3"
+              style="
+                padding: 10px 15px;
+                border-width: 1px;
+                font-size: 14px;
+                font-weight: 500;
+              "
+            >
+             Source Code
+            </button>
+            </a>
+          </p>
+        </div>
+      </div>
     </div>
 
     <!-- Skill box -->
-    <div class="container-lg container-fluid">
-        <div class="row mt-4">
-            <div class="col-12 text-lg-start text-center">
-                <h2 class="" id="skillbox">My Skill</h2>
-                <!-- <h2 id="projectbox">My Project</h2> -->
-            </div>
-            <div class="col-xl-10 col-11 mx-auto d-none d-lg-block mt-3">
-                <div class="table-responsive ">
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th>Programming Languages:</th>
-                                <th>Front-end Development:</th>
-                                <th>Back-end Development:</th>
-                                <th>Version Control:</th>
-                                <th>Cloud Computing and Deployment:</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <ul>
-                                        <li>Java</li>
-                                        <li>Python</li>
-                                        <li>JavaScript(JS)</li>
-                                        <li>TypeScript(TS)</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>HTML</li>
-                                        <li>CSS</li>
-                                        <li>Bootstrap</li>
-                                        <li>Angular</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Spring Boot- Java</li>
-                                        <li>Django- Python</li>
-                                        <li>MySQL(DB)</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Git</li>
-                                        <li>GitHub</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>AWS EC2</li>
-                                    </ul>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div class="d-lg-none d-block text-center mt-3 col-sm-6 col-10 mx-auto">
-                <p class="fs-5 mt-2">Programming Languages:</p>
-                <p>Java</p>
-                <p>Python</p>
-                <p>JavaScript(JS)</p>
-                <p>TypeScript(TS)</p>                
-                <hr>
-                <p class="fs-5 mt-2">Back-end Development:</p>
-                <p>Spring Boot- Java</p>
-                <p>Django- Python</p>
-                <p>MySQL(DB)</p>                             
-                <hr>
-                <p class="fs-5 mt-2">Front-end Development:</p>
-                <p>HTML</p>
-                <p>CSS</p>
-                <p>Bootstrap</p>
-                <p>Angular</p>
-                <hr>
-                <p class="fs-5 mt-2">Version Control:</p>
-                <p>Git</p>
-                <p>GitHub</p>
-                <hr>
-                <p class="fs-5 mt-2">Cloud Computing and Deployment:</p>
-                <p>AWS EC2</p>
-            </div>
+    <div class="container-lg container-fluid " >
+      <div class="row mt-4">
+        <div class="col-12 text-lg-start text-center">
+          <h2 class="" id="skillbox">My Skill</h2>
         </div>
+        <div class="col-xl-10 col-11 mx-auto d-none d-lg-block mt-3">
+          <div class="table-responsive">
+            <table class="table table-bordered  my-5">
+              <thead>
+                <tr>
+                  <th>Programming Languages:</th>
+                  <th>Front-end Development:</th>
+                  <th>Back-end Development:</th>
+                  <th>Version Control:</th>
+                  <th>Cloud Computing and Deployment:</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <ul>
+                      <li>Java</li>
+                      <li>Python</li>
+                      <li>JavaScript(JS)</li>
+                      <li>TypeScript(TS)</li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul>
+                      <li>HTML</li>
+                      <li>CSS</li>
+                      <li>Bootstrap</li>
+                      <li>Angular</li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul>
+                      <li>Spring Boot- Java</li>
+                      <li>Django- Python</li>
+                      <li>MySQL(DB)</li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul>
+                      <li>Git</li>
+                      <li>GitHub</li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul>
+                      <li>AWS EC2</li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="d-lg-none d-block text-center mt-3 col-sm-6 col-10 mx-auto">
+          <p class="fs-5 mt-2">Programming Languages:</p>
+          <p>Java</p>
+          <p>Python</p>
+          <p>JavaScript(JS)</p>
+          <p>TypeScript(TS)</p>
+          <hr />
+          <p class="fs-5 mt-2">Back-end Development:</p>
+          <p>Spring Boot- Java</p>
+          <p>Django- Python</p>
+          <p>MySQL(DB)</p>
+          <hr />
+          <p class="fs-5 mt-2">Front-end Development:</p>
+          <p>HTML</p>
+          <p>CSS</p>
+          <p>Bootstrap</p>
+          <p>Angular</p>
+          <hr />
+          <p class="fs-5 mt-2">Version Control:</p>
+          <p>Git</p>
+          <p>GitHub</p>
+          <hr />
+          <p class="fs-5 mt-2">Cloud Computing and Deployment:</p>
+          <p>AWS EC2</p>
+        </div>
+      </div>
     </div>
 
     <!-- #Experience box -->
-    <div class="container-lg container-fluid mt-4">    
-        <div class="row">
-            <div class="col-12 text-lg-start text-center">
-                <h2 id="experiencebox">Experience</h2>
-            </div>
+    <div class="container-lg container-fluid mt-4">
+      <div class="row">
+        <div class="col-12 text-lg-start text-center">
+          <h2 id="experiencebox">Experience</h2>
         </div>
-        <div class="row mt-4">
-            <div class="col-10 offset-1">
-                <input type="radio" class="form-check-input fs-5" style="background-color: var(--primary);" checked
-                    readonly>
-                <label>FinOS</label>
-                <div class="mx-2 bar" >
+      </div>
+      <div class="row mt-4">
+        <div class="col-10 offset-1">
+          <input
+            type="radio"
+            class="form-check-input fs-5"
+            style="background-color: var(--primary)"
+            checked
+            readonly
+          />
+          <label>FinOS</label>
+          <div class="mx-2 bar">
+            <p class="p-xl-5 p-3 mx-xl-5">
+              FinOS utilizes Fineract, an open-source platform, along with Java,
+              Angular, and MySQL to deliver robust financial solutions, ensuring
+              efficient and secure financial management for their clients.
+            </p>
+          </div>
 
-                    <p class="p-xl-5 p-3 mx-xl-5">FinOS utilizes Fineract, an open-source platform, along with Java, Angular, and MySQL to deliver robust financial solutions, ensuring efficient and secure financial management for their clients.</p>
-                </div>
+          <input
+            type="radio"
+            class="form-check-input fs-5"
+            style="background-color: var(--primary)"
+            checked
+            readonly
+          />
+          <label>Giri Technologies Private Limited</label>
+          <div class="mx-2 bar">
+            <p class="p-xl-5 p-3 mx-xl-5">
+              Working at this company has provided me with valuable exposure to
+              the .NET Framework and SQL, enhancing my professional skills and
+              contributing to my growth, despite their classification as older
+              technologies.
+            </p>
+          </div>
 
-                <input type="radio" class="form-check-input fs-5" style="background-color: var(--primary);" checked
-                    readonly>
-                <label>Giri Technologies Private Limited</label>
-                <div class="mx-2 bar">
-
-                    <p class="p-xl-5 p-3 mx-xl-5">Working at this company has provided me with valuable exposure to the
-                        .NET Framework and SQL, enhancing my professional skills and contributing to my growth, despite
-                        their classification as older technologies.
-                    </p>
-                </div>
-
-                <input type="radio" class="form-check-input fs-5" style="background-color: var(--primary);" checked
-                    readonly>
-                <label>Srishti Innovative</label>
-                <div class="mx-2 bar" >
-
-                    <p class="p-xl-5 p-3 mx-xl-5">This is God's grace at work. My first internship is with a reputable
-                        company,
-                        and I learn the basics of Python programming. Really, the environment is so good in Kerala
-                        (Techno Park). Such a good experience! Thank you so much for this opportunity.</p>
-                </div>
-
-            </div>
+          <input
+            type="radio"
+            class="form-check-input fs-5"
+            style="background-color: var(--primary)"
+            checked
+            readonly
+          />
+          <label>Srishti Innovative</label>
+          <div class="mx-2 bar">
+            <p class="p-xl-5 p-3 mx-xl-5">
+              This is God's grace at work. My first internship is with a
+              reputable company, and I learn the basics of Python programming.
+              Really, the environment is so good in Kerala (Techno Park). Such a
+              good experience! Thank you so much for this opportunity.
+            </p>
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- #Footer -->
     <footer class="mt-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 mt-1" style="color: white;">
-                    Copyright©2023 Jerwish
-                </div>
-                <div class="col-md-6">
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 mt-1" style="color: white">
+            Copyright©2023 Jerwish
+          </div>
+          <div class="col-md-6"></div>
         </div>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>
